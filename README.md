@@ -3,7 +3,7 @@ A walkthrough for easy conversion of Dash client-side app to an exe file
 
 ## Disclaimer
 I've only tried this with my dash app which is client-side only (meaning it needs no interface with an external database/site)
-I've only tested it on a windows mahine with chrome browser
+I've only tested it on a windows machine with chrome browser
 
 ## Quick overview & who is this tutorial good for
 This tutorial assumes you already have a nice running dash app, it can either be static or dynamic, that runs well on your local machine.
