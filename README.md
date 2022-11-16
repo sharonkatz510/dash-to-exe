@@ -14,7 +14,8 @@ address to your browser.
 and without any programming knowledge.
 
 ## 1st step: open the browser session automatically
-To do so, we follow the instructions decribed [here]('https://community.plotly.com/t/auto-open-browser-window-with-dash/31948/2')
+To do so, we follow the instructions decribed [here](https://community.plotly.com/t/auto-open-browser-window-with-dash/31948/2)
+
 Meaning we add two imports to our dash app:
 ~~~
 import webbrowser
@@ -69,7 +70,7 @@ pyinstaller --onedir --add-data "<python_path>/Lib/site-packages/distributed/dis
 
 ## Final Notes:
 1. You can also use the **--onefile** flag of pyinstaller instead of **--onedir**, this will create only a single exe file inside /dist/<your-app-name> and there will be now supplemental files. However, this way the exe file runs much slower.
-2. Your exe file needs to stay inside <your-app-name> folder to use all its dependencies. So if you send it to another computer make sure to pack the entire folder and not just the exe file. There are nicer ways to deliver this folder instead of as a ZIP (take a look at [NINS]('https://youtu.be/UZX5kH72Yx4?t=330'))
+2. Your exe file needs to stay inside <your-app-name> folder to use all its dependencies. So if you send it to another computer make sure to pack the entire folder and not just the exe file. There are nicer ways to deliver this folder instead of as a ZIP (take a look at [NINS](https://youtu.be/UZX5kH72Yx4?t=330))
 	
 **Hope you found this tutorial usefull and if you have any improvement suggestions feel free to open an issue**
 
