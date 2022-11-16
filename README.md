@@ -25,7 +25,7 @@ We add the following function in our code (I would suggest adding it at the end 
 def open_browser():
 	webbrowser.open_new("http://localhost:{}".format(8050))
 ~~~
-### Note that you can change 8050 to other port numer you wish as long as its consistent with the following:
+**Note that you can change 8050 to other port numer you wish as long as its consistent with the following:**
 Finally modify the line that runs the dash app to be:
 ~~~
 if __name__ == '__main__':
@@ -35,7 +35,7 @@ if __name__ == '__main__':
 
 ### Now your dash app should be able to open its own browser automatically. You better verify this by running it
 
-Now that we have this covered, let's pack it into an exe.
+Having covered the easy part, let's now pack our app into an exe.
 To do so you'll first have to download a python package called **pyinstaller** which basically goes over your app code, finds all the necassery imports and modules
 and packs them into a single folder. after doing so it packs your python app as exe to be run on any computer regardless of python installation.
 The easiest way to install pyinstaller is using pip (just write the following in your terminal/cmd):
