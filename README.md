@@ -51,3 +51,26 @@ The "build" directory can be deleted together with the spec file.
 Inside the "dist" folder you'll find a subfolder with the name of your app and inside of it you will find the exe file that contains the same name as your app name.
 for example if your python app is named "app.py" you'll find a folder with the name **dist/app** and a **app.exe** file inside of it.
 
+**Before you run to tell your friends** open the command prompt in the folder where your new exe is located and run it inside your CMD.
+This way if/when it fails you'll know why. To do this simply open CMD in your desired folder and execute the following:
+~~~
+<your-app-name>.exe
+~~~
+
+## Simple troubleshooting: When your app fails because a file is missing
+If you try the above, and your app fails to execute, and in the CMD log you see that he reason is some file missing (for example for me it was "distributed.yaml")
+try to locate it in your python site-packages directory. Then you need to redo the pyinstaller packing only this time you explicitly tell pyinstaller where to find the specific missing file like so:
+~~~
+pyinstaller --onedir --add-data "<python_path>/Lib/site-packages/distributed/distributed.yaml;./distributed" <your-app-name>.py
+~~~
+**Be sure to replace the python_path with your actual python path** for example on my PC it's:
+~~~
+"C:/Users/User/anaconda3"
+~~~
+
+## Final Notes:
+1. You can also use the **--onefile** flag of pyinstaller instead of **--onedir**, this will create only a single exe file inside /dist/<your-app-name> and there will be now supplemental files. However, this way the exe file runs much slower.
+2. Your exe file needs to stay inside <your-app-name> folder to use all its dependencies. So if you send it to another computer make sure to pack the entire folder and not just the exe file. There are nicer ways to deliver this folder instead of as a ZIP (take a look at [NINS]('https://youtu.be/UZX5kH72Yx4?t=330'))
+	
+**Hope you found this tutorial usefull and if you have any improvement suggestions feel free to open an issue**
+
