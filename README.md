@@ -58,8 +58,7 @@ This way if/when it fails you'll know why. To do this simply open CMD in your de
 ~~~
 
 ## Simple troubleshooting: When your app fails because a file is missing
-If you try the above, and your app fails to execute, and in the CMD log you see that he reason is some file missing (for example for me it was "distributed.yaml")
-try to locate it in your python site-packages directory. Then you need to redo the pyinstaller packing only this time you explicitly tell pyinstaller where to find the specific missing file like so:
+If you try the above, and your app fails to execute, and in the CMD log you see that the reason is some file missing (for example for me it was **"distributed/distributed.yaml"** that was missing), then try to locate it in your python site-packages directory. Then you need to redo the pyinstaller packing only this time you explicitly tell pyinstaller where to find the specific missing file like so:
 ~~~
 pyinstaller --onedir --add-data "<python_path>/Lib/site-packages/distributed/distributed.yaml;./distributed" <your-app-name>.py
 ~~~
